@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>GreatKart | Cart</title>
+
+<link href="images/favicon.ico" rel="shortcut icon">
+
+<!-- Tailwind CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/output.css' %}">
+
+<!-- Font Awesome -->
+<link href="{% static 'assets/fonts/fontawesome/css/all.min.css' %}" rel="stylesheet">
+
+<!-- jQuery + Bootstrap JS (for dropdowns) -->
+<script src="{% static 'assets/js/jquery-2.0.0.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Minimal CSS for Bootstrap dropdowns only -->
+<style>
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  min-width: 220px;
+  padding: 6px 0;
+  z-index: 50;
+}
+.dropdown-menu.show { display: block; }
+.dropdown-item {
+  padding: 8px 16px;
+  display: block;
+  color: #111827;
+}
+.dropdown-item:hover { background: #f3f4f6; }
+</style>
+</head>
+
+<body class="bg-gray-50">
+
+{% include  "eco/includes/navbar.html" %}
+{% block content %}
+
+{% endblock %}
+<!-- DROPDOWN SCRIPT -->
+<!-- ================= FOOTER ================= -->
+{% include "eco/includes/footer.html" %}
+<script>
+  const btn = document.getElementById("categoryBtn");
+  const menu = document.getElementById("categoryMenu");
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("hidden");
+  });
+
+  document.addEventListener("click", () => {
+    menu.classList.add("hidden");
+  });
+</script>
+
+</body>
+</html>

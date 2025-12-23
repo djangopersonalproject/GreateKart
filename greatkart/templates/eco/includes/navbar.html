@@ -1,0 +1,95 @@
+{% load static %}
+<!-- ================= HEADER ================= -->
+<header class="bg-white border-b border-b-gray-200">
+  <!-- TOP BAR -->
+  <nav class="border-b border-b-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-2 text-sm text-gray-500">
+      <div class="flex flex-col sm:flex-row justify-between gap-4">
+        <ul class="flex flex-wrap justify-center sm:justify-start gap-6">
+          <li class="dropdown relative">
+            <a class="dropdown-toggle cursor-pointer" data-toggle="dropdown">Language</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Arabic</a></li>
+              <li><a class="dropdown-item" href="#">Russian</a></li>
+            </ul>
+          </li>
+          <li class="dropdown relative">
+            <a class="dropdown-toggle cursor-pointer" data-toggle="dropdown">USD</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">EUR</a></li>
+              <li><a class="dropdown-item" href="#">AED</a></li>
+              <li><a class="dropdown-item" href="#">RUBL</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="hidden sm:flex justify-center gap-6">
+          <li><i class="fa fa-envelope"></i> Email</li>
+          <li><i class="fa fa-phone"></i> Call us</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- MAIN HEADER -->
+  <div class="max-w-7xl mx-auto px-4 py-4">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+
+      <!-- Logo -->
+      <div class="col-span-1 md:col-span-3 flex justify-center md:justify-start">
+        <img src="{% static 'assets/images/logo.png' %}" class="h-10">
+      </div>
+
+      <!-- All Category -->
+      <div class="col-span-1 md:col-span-2 relative text-center md:text-left">
+      <button id="categoryBtn" class="w-full lg:w-[95%] bg-blue-600 text-white px-4 py-2 rounded flex items-center justify-between gap-2">
+          <i class="fa fa-bars"></i>
+          <span class="font-bold text-white"> All category</span>
+          <i class="fa fa-chevron-down"></i>
+        </button>
+
+        <div id="categoryMenu"
+          class="hidden absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 w-72 bg-white border rounded shadow-lg z-50">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Machinery / Mechanical Parts / Tools</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Consumer Electronics / Home Appliances</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Auto / Transportation</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Apparel / Textiles / Timepieces</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home & Garden / Construction / Lights</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Beauty & Personal Care / Health</a>
+        </div>
+      </div>
+
+      <!-- Store Button -->
+      <div class="col-span-1 md:col-span-1">
+        <a href="./store.html"
+          class="block w-full text-center border border-blue-600 text-blue-600 px-4 py-2 rounded">
+          Store
+        </a>
+      </div>
+
+      <!-- Search -->
+      <div class="col-span-1 md:col-span-4">
+        <form class="flex">
+          <input class="w-full border rounded-l px-4 py-2 border-gray-500 focus:border-gray-800 focus:outline-none" placeholder="Search">
+          <button class="bg-blue-600 px-4 text-white rounded-r">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- User & Cart -->
+      <div class="col-span-1 md:col-span-2 flex justify-center items-center gap-6">
+        <div class="text-center md:text-right">
+          <p class="text-sm text-gray-500">Welcome guest!</p>
+          <a href="./signin.html" class="text-blue-600">Sign in</a> |
+          <a href="./register.html" class="text-blue-600">Register</a>
+        </div>
+        <a href="./cart.html" class="relative">
+          <i class="fa fa-shopping-cart text-xl"></i>
+          <span class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 rounded-full">0</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</header>
